@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />		
+		<meta charset='utf-8'/>
+		<title>test page</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Kalam');
+			@import url('https://fonts.googleapis.com/css?family=Kalam|Nanum+Gothic');
+			* {margin:0; padding:0; box-sizing:border-box;}
+			a {text-decoration:none; color:white;}
+			html {height:100%;}
+			body {height:100%;}
+			.clicked {opacity:1;}
+			
+			.contain {width:900px; height:100%; margin:0 auto;}
+			
+			header {height:150px; font-family: 'Kalam', cursive; position:relative;}
+			header .title {font-weight:bold; font-size:42px; 
+						   position:absolute; bottom:0; color:#555;}
+			header img {width:150px; position:absolute; bottom:0; left:-110px;}
+			
+			section {position:relative; top:25px;}
+			section .textContain {width:300px; padding:20px; background:orange; border-radius:50px 50px 0px 0px;}
+			section .textContain p {color:white; font-family: 'Nanum Gothic', sans-serif;}
+			section .textContain .title {font-size:18px; font-weight:bold; margin-bottom:12px;}
+			section .textContain .main {font-size:14px; line-height:26px;}
+			
+			section figure {width:400px; height:300px; 
+							position:absolute; right:50px; top:50%; 
+							transform:translateY(-50%);}
+			section figure img {height:300px; display:inline-block; 
+								position:absolute; opacity:0; transition:all .5s ease 0s;}
+			
+			
+			section nav {position:absolute; right:0; top:50%; transform:translateY(-50%);}
+			section nav li {list-style:none; width:15px; height:15px; 
+							border-radius:15px; background:#353535; margin-top:15px; cursor:pointer;}
+			section nav li:nth-child(1) {background:orange;}				
+			
+			footer {width:900px; height:150px; background:gray; position:absolute; bottom:0;}
+			footer .deco1 {width:250px; position:absolute; top:-140px; left:30px;}
+			footer .deco2 {width:200px; position:absolute; bottom:0px; right:-250px;}
+			footer p {color:white; font-family: 'Nanum Gothic', sans-serif; text-align:center; margin-top:60px;}
+		</style>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+		<script type="text/javascript" src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+		<script language='javascript'>
+			<!--
+				$(document).ready(function(){
+				
+					$("nav li").eq(0).on("click",function(){				
+						$("figure img").removeClass("clicked");	
+						$("figure img").eq(0).addClass("clicked");
+						$("nav li").css({"background":"#353535"});
+						$(this).css({"background":"orange"});
+					});
+					$("nav li").eq(1).on("click",function(){				
+						$("figure img").removeClass("clicked");	
+						$("figure img").eq(1).addClass("clicked");
+						$("nav li").css({"background":"#353535"});
+						$(this).css({"background":"orange"});
+					});
+					$("nav li").eq(2).on("click",function(){				
+						$("figure img").removeClass("clicked");	
+						$("figure img").eq(2).addClass("clicked");
+						$("nav li").css({"background":"#353535"});
+						$(this).css({"background":"orange"});
+					});
+					$("nav li").eq(3).on("click",function(){				
+						$("figure img").removeClass("clicked");	
+						$("figure img").eq(3).addClass("clicked");
+						$("nav li").css({"background":"#353535"});
+						$(this).css({"background":"orange"});
+					});																
+				});
+			//-->
+		</script>
+	</head>
+	<body>
+		<div class='contain'>
+			<header>
+				<img src='minion1.png'/>
+				<div class='title'>Minions</div>
+			</header>
+			<section>
+				<div class='textContain'>
+					<p class='title'>미니언</p>
+					<div class='tc'>
+					<p class='main'>
+					등신 몸매와 노란색 피부를 가진 유쾌한 눈깔괴물들이다. 
+					외모는 크게 두 종류인데 외눈박이와 두눈박이이며 
+					두눈박이가 외눈박이보다 개체수가 약간 많다. 또한 
+					다른 부분에서의 외모 차이로서 오드아이 미묘한 키
+					내지는 체형 차이, 그리고 머리카락 외에는 다 
+					똑같이 생겨보이지만 멜, 데이브(미니언), 케빈, 
+					칼, 스튜어트, 제리, 랜스, 밥, 톰 등 각각 
+					이름도 있다. 덤으로 이들의 개체수는 총 898마리.
+					</p>
+					</div>
+				</div>				
+				<figure>
+					<img src='minion2.png' class='clicked'/>
+					<img src='minion3.png'/>
+					<img src='minion4.png'/>
+					<img src='minion5.png'/>
+				</figure>
+				<nav>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</nav>
+			</section>
+			<footer>
+				<img src='minion8.png'/ class='deco1'>
+				<img src='minion6.png'/ class='deco2'>
+				
+				<p>
+					<a href="https://docs.google.com/spreadsheets/d/1Mbd9WSzS4Z7gvbBxYhPkhbAZX_R8SAlWI97xGNmTf6M/edit#gid=0" target="_blank">
+					Digital Publishing
+					</a>
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
